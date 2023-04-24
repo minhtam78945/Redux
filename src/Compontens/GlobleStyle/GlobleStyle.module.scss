@@ -1,0 +1,83 @@
+:root {
+    --primary: #fe2c55;
+    //DEfault layout
+    
+
+    //Color Font
+    --whiteColor: #ebebeb;
+
+    // TEXTCOLOR
+    --text-color: rgba(255, 255, 255, 0.9);
+
+    // CaretColor
+    --CaretColor: rgb(255, 59, 92);
+
+    //Button
+    --primary-btn: rgba(255, 59, 92, 1);
+    --text-button: rgba(255, 255, 255, 1);
+    --white: #fff;
+
+    //font
+    --font-family: 'ProximaNova', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+    overflow-y: overlay;
+}
+//Scroball-CSS
+html ::-webkit-scrollbar {
+    border-radius: 0px;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+// Font emmebed
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+a[href] {
+    color: var(--white);
+    text-decoration: none;
+}
+
+// Custom tippy
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        color: rgb(255, 255, 255);
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+    .tippy-arrow {
+        color: #333;
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
+}
