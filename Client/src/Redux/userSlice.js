@@ -9,9 +9,20 @@ export const userSlice = createSlice({
     avatarUrl:
       "https://img.lovepik.com/free-png/20211204/lovepik-cartoon-avatar-png-image_401302777_wh1200.png",
     themeColor: "#ff90501",
+    loading: false,
+    error: false,
   },
   reducers: {
-    update: (state, action) => {
+    updateStart: (state) => {
+      state.loading = true;
+    },
+    updateFail: (state) => {
+      state.loading = false;
+      state.error = true;
+    },
+    updateSuccess: (state, action) => {
+      state.loading = false;
+      state.error = false;
       state.name = action.payload.name;
       state.age = action.payload.age;
       state.about = action.payload.about;
@@ -20,5 +31,5 @@ export const userSlice = createSlice({
     },
   },
 });
-export const { update } = userSlice.actions;
+export const { updateFail, updateSuccess, updateStart } = userSlice.actions;
 export default userSlice.reducer;

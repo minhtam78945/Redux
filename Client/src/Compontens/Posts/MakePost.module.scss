@@ -1,0 +1,31 @@
+.makepost-container {
+    height: 70vh;
+    background-color: #292929;
+    padding: 0.75rem 1.25rem 0 1.25rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+  .makePost-navigation{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.25rem;
+  }
+  .makePost-save{
+    cursor: pointer;
+  }
+  .makepost-tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .makepost-tags > button {
+    color: white;
+    border: none;
+    padding: 0.4rem;
+    font-family: "Noto Sans", sans-serif;
+    border-radius: 14px;
+    cursor: pointer;
+  }
+  

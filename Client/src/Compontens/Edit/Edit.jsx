@@ -3,7 +3,7 @@ import styles from "./Edit.module.scss";
 import { useState } from "react";
 import Input from "../InputFields/Input";
 import { useDispatch, useSelector } from "react-redux";
-import { update } from "../../Redux/userSlice";
+import { updateUsers } from "../../Redux/apiRes";
 const cx = classNames.bind(styles);
 function EditPage(props) {
   const { setEdit } = props;
@@ -29,7 +29,7 @@ function EditPage(props) {
       avatarUrl: url,
       themeColor: theme,
     };
-    dispatch(update(updateUser));
+    updateUsers(updateUser, dispatch);
   };
   return (
     <>
@@ -42,7 +42,7 @@ function EditPage(props) {
             <Input label="Age" data={user.age} setData={setAge} />
             <Input
               inpuType="textarea"
-              className="input_about"
+              inputAbout
               label="About"
               data={user.about}
               setData={setAbout}
