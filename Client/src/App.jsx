@@ -8,7 +8,7 @@ function App() {
       {isEdit ? (
         <>
           {" "}
-          <EditPage />
+          <EditPage setEdit={setEdit} />
         </>
       ) : (
         <>
